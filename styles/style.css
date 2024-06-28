@@ -57,16 +57,41 @@
     height: 215px;
     padding: 2px;
     position: absolute;
-    background: linear-gradient(90deg, #ae6260, #ad6685, #9873a7, #7084bc, #3f92bd);
+    background: linear-gradient(90deg, #ae6260, #3f92bd);
     border-radius: 100%;
     z-index: -1;
 }
 
-.perfil h1{
+
+.nome-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.nome-perfil img{
+    width: 30px;
+    height: 30px;
+}
+
+.nome-perfil h1{
     position: relative;
     font-size: 50px;
     color: #fff;
     text-shadow: 2px 6px 3px #000000;
+}
+
+.nome-perfil::before{
+    content: "";
+    width: 93px;
+    height: 2px;
+    padding: 2px;
+    position: absolute;
+    background: linear-gradient(90deg, #ae6260, #3f92bd);
+    border-radius: 21%;
+    z-index: -1;
+    left: 5px;
 }
 
 nav{
@@ -113,8 +138,56 @@ nav a p{
 /* Estatísticas */
 .estatistica{
     font-family: 'Montserrat', sans-serif;
+    background: url("../img/img-fundo.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.estatistica img{
-    width: 50px;
+.estatistica h1{
+    font-size: 74px;
+    color: #fff;
+    text-shadow: 3px 6px 1px #000000;
+}
+
+.estatistica table{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.estatistica table th{
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 3px 6px 1px #000000;
+
+}
+
+.estatistica table th, td{
+    padding: 20px;
+}
+
+.estatistica table td img{
+    height: 35px;
+}
+
+.estatistica table td:first-of-type{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.estatistica table tr:nth-child(odd){
+    background-color: #000000b7;
+    color: #fff;
+}
+
+.estatistica table tr:nth-child(even){
+    background-color: #ffffffb7;
+    color: #000;
 }
